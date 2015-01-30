@@ -1,0 +1,82 @@
+{  
+   "GetSocialTreeResult":{  
+      "Message":null,
+      "Success":true,
+      "Data":[  
+         {  
+            "Email":"ceilidh.macleod@resaas.com",
+            "Id":"e52d567a-f204-468c-b4f0-0332f51eb56e",
+            "Name":"Ceilidh MacLeod",
+            "Phone":"7787739720",
+            "DomainUrl":"ceilidhmacleod",
+            "ProfilePicture":"http:\/\/cdn.resaas.com\/assets\/realtors\/website\/0\/9\/745\/profile.png",
+            "Relationships": []
+         },
+         {  
+            "Email":"christophe.boyer@resaas.com",
+            "Id":"8b6480f0-9e20-4466-9411-ddcf7aa3210c",
+            "Name":"Christophe Boyer",
+            "Phone":"",
+            "DomainUrl":"christopheboyer",
+            "ProfilePicture":"http:\/\/cdn.resaas.com\/assets\/realtors\/website\/0\/254\/40\/profile.png",
+            "Relationships":[
+               {  
+                  "Email":"hayley.thomas@resaas.com",
+                  "Id":"ecf96bb7-f2fd-4c58-8733-04519cf6e822",
+                  "Name":"Hayley Thomas",
+                  "Phone":"",
+                  "DomainUrl":"hayleythomas",
+                  "ProfilePicture":"http:\/\/cdn.resaas.com\/assets\/realtors\/website\/0\/235\/530\/profile.png",
+                  "Relationships": []
+               },
+               {  
+                  "Email":"marcus.engstrom@resaas.com",
+                  "Id":"54d76ddf-b0aa-49a4-b8b9-ec163cc1093b",
+                  "Name":"Marcus Engstrom",
+                  "Phone":"",
+                  "DomainUrl":"marcusengstrom",
+                  "ProfilePicture":"http:\/\/cdn.resaas.com\/assets\/realtors\/website\/0\/3\/44\/profile.png",
+                  "Relationships": []
+               }
+            ]
+         },
+         {  
+            "Email":"cory@resaas.com",
+            "Id":"8f7e51b7-2bcc-43f7-872a-f71ba0ca828f",
+            "Name":"Cory Brandolini",
+            "Phone":"1 888 929 SAAS",
+            "DomainUrl":"corybrandolini",
+            "ProfilePicture":"http:\/\/cdn.resaas.com\/assets\/realtors\/website\/0\/0\/16\/profile.png",
+            "Relationships":[
+               {  
+                  "Email":"agustian.hermanto@resaas.com",
+                  "Id":"1666d67b-54e2-43e0-9ae2-ecbf8738e66c",
+                  "Name":"Agustian Hermanto",
+                  "Phone":"778-882-0042",
+                  "DomainUrl":"agustianhermanto",
+                  "ProfilePicture":"http:\/\/cdn.resaas.com\/assets\/realtors\/website\/0\/14\/362\/profile.png",
+                  "Relationships": []
+               },
+               {  
+                  "Email":"braden.oneill@resaas.com",
+                  "Id":"d53ae082-2115-4ef2-b816-004792cd4597",
+                  "Name":"Braden O'Neill",
+                  "DomainUrl":"bradenoneill",
+                  "ProfilePicture":"http:\/\/cdn.resaas.com\/assets\/realtors\/website\/0\/6\/793\/profile.png",
+                  "Relationships": [
+                     {  
+                        "Email":"marwan.haddad@resaas.com",
+                        "Id":"e95fa284-f93c-462d-aed0-f7659f540958",
+                        "Name":"Marwan Haddad",
+                        "Phone":"604-558-2929",
+                        "DomainUrl":"marwanhaddad",
+                        "ProfilePicture":"http:\/\/cdn.resaas.com\/assets\/realtors\/website\/0\/0\/50\/profile.png",
+                        "Relationships": []
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}
