@@ -42,35 +42,43 @@
     [
        {
            "name": "Fred Flintstone",
+           "image": "assets/images/fred.jpg",
            "children": [
               {
                   "name": "Wilma Flintsone",
+                  "image": "assets/images/wilma.jpg",
                   "children": [
                      {
-                         "name": "Betty Rubble"
-
+                         "name": "Betty Rubble",
+                         "image": "assets/images/betty.jpg"
                      },
                      {
-                         "name": "Barney Rubble"
+                         "name": "Barney Rubble",
+                         "image": "assets/images/barney.jpg"
                      }
                   ]
               },
               {
                   "name": "Pebbles Flintsone",
+                  "image": "assets/images/pebbles.jpg",
                   "children": [
                      {
-                         "name": "Bamm-Bamm Rubble"
+                         "name": "Bamm-Bamm Rubble",
+                         "image": "assets/images/bammbamm.jpg"
                      }
                   ]
               },
               {
                   "name": "Dino Flintsone",
+                  "image": "assets/images/dino.jpg",
                   "children": [
                      {
-                         "name": "Astro Jetson"
+                         "name": "Astro Jetson",
+                         "image": "assets/images/astro.jpg"
                      },
                      {
-                         "name": "Orbitty Jetson"
+                         "name": "Orbitty Jetson",
+                         "image": "assets/images/orbitty.jpg"
                      }
                   ]
               }
@@ -82,6 +90,9 @@
     var margin = { top: 20, right: 120, bottom: 20, left: 120 },
         width = 960 - margin.right - margin.left,
         height = 500 - margin.top - margin.bottom;
+
+    var imagedefault = { width: "50px", height: "50px" };
+    var imagesmall = { width: "50px", height: "50px" };
 
     var i = 0,
         duration = 750,
@@ -114,7 +125,8 @@
             links = tree.links(nodes);
 
         // Normalize for fixed-depth.
-        nodes.forEach(function (d) { d.y = d.depth * 180; });
+        nodes.forEach(function (d)
+        { d.y = d.depth * 180; });
 
         // Update the nodes…
         var node = svg.selectAll("g.node")
@@ -126,13 +138,15 @@
             .attr("transform", function (d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
             .on("click", click);
 
-        nodeEnter.append("circle")
-            .attr("r", 1e-6)
-            .style("fill", function (d) { return d._children ? "lightsteelblue" : "#fff"; });
+        nodeEnter.append("image")
+            .attr("xlink:href", function (d) { return d.image })
+            .attr("width", imagedefault.width)
+            .attr("height", imagedefault.height);
 
         nodeEnter.append("text")
-            .attr("x", function (d) { return d.children || d._children ? -13 : 13; })
-            .attr("dy", ".35em")
+            .attr("x", 0)
+            //.attr("x", function (d) { return d.children || d._children ? -13 : 13; })
+            .attr("dy", "0em")
             .attr("text-anchor", function (d) { return d.children || d._children ? "end" : "start"; })
             .text(function (d) { return d.name; })
             .style("fill-opacity", 1e-6);
@@ -142,9 +156,9 @@
             .duration(duration)
             .attr("transform", function (d) { return "translate(" + d.y + "," + d.x + ")"; });
 
-        nodeUpdate.select("circle")
-            .attr("r", 10)
-            .style("fill", function (d) { return d._children ? "lightsteelblue" : "#fff"; });
+        nodeUpdate.select("image")
+            .attr("width", imagedefault.width)
+            .attr("height", imagedefault.height);
 
         nodeUpdate.select("text")
             .style("fill-opacity", 1);
@@ -155,11 +169,12 @@
             .attr("transform", function (d) { return "translate(" + source.y + "," + source.x + ")"; })
             .remove();
 
-        nodeExit.select("circle")
-            .attr("r", 1e-6);
-
         nodeExit.select("text")
             .style("fill-opacity", 1e-6);
+
+        nodeExit.select("image")
+            .attr("width", imagedefault.width)
+            .attr("height", imagedefault.height);
 
         // Update the links…
         var link = svg.selectAll("path.link")
