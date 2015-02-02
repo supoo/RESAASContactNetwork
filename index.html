@@ -144,8 +144,7 @@
             .attr("height", imagedefault.height);
 
         nodeEnter.append("text")
-            .attr("x", 0)
-            //.attr("x", function (d) { return d.children || d._children ? -13 : 13; })
+            .attr("x", function (d) { return d.children || d._children ? 0 : 50; })
             .attr("dy", "0em")
             .attr("text-anchor", function (d) { return d.children || d._children ? "end" : "start"; })
             .text(function (d) { return d.name; })
